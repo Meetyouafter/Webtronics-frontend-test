@@ -1,0 +1,48 @@
+@import './variable.scss';
+
+@mixin button($width) {
+  background: $blue-green-gradient-color;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $dark-blue-color;
+  height: 72px;
+  width: $width;
+  cursor: pointer;
+
+  &:hover {
+    color: $blue-color;
+  }
+
+  &:active {
+    color: $white-color;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.short_button {
+  @include button(288px);
+}
+
+.long_button {
+  @include button(497px);
+}
+
+.input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+  width: 493px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}

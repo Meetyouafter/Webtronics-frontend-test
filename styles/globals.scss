@@ -1,0 +1,98 @@
+
+@import './variable.scss';
+
+@font-face {
+  font-family: Clash Display;
+  src: url(../public/fonts/ClashDisplay-Regular.otf)
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../public/fonts/Inter-Regular.ttf);
+}
+
+h1 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 150px;
+  line-height: 120%;
+}
+
+h2 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 120%;
+}
+
+h3 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+h4 {
+  font-family: 'Clash Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+@mixin paragrath($size) {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: $size;
+  line-height: 140%;
+}
+
+.paragrath16px {
+  @include paragrath(16px);
+}
+
+.paragrath14px {
+  @include paragrath(14px);
+}
+
+body {
+  background-color: $dark-blue-color;
+  background-image: url(../public/images/bacgroundImg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: $white-color;
+  padding-left: 15%;
+  padding-right: 15%;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}

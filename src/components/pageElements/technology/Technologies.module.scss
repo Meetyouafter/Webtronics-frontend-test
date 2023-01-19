@@ -1,0 +1,29 @@
+@import '../../../../styles/variable.scss';
+
+.technology {
+  background: #0c102d;
+  backdrop-filter: blur(5px);
+  width: 181px;
+  height: 230px;
+  border-radius: 16px 16px 80px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.technology:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-left: 60px solid transparent;
+  border-bottom: 60px solid $dark-blue-color;
+}
+
+.container {
+  display: flex;
+}

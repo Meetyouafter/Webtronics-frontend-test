@@ -1,0 +1,49 @@
+@import '../../../../styles/variable.scss';
+
+@mixin mentor_ava($url, $size) {
+  width: 184px;
+  height: 184px;
+  border-radius: 50%;
+  background: url($url) no-repeat;
+  background-size: auto $size;
+  border: 5px solid $blue-green-gradient-color;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  width: 150px;
+}
+
+.avatar_wrapper {
+  background: $gray-violet-gradient-color;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar1 {
+  @include mentor_ava('../../../../public/images/mentors/robertFox.png', 300px);
+}
+
+.avatar2 {
+  @include mentor_ava(
+    '../../../../public/images/mentors/kristinWatson.png',
+    230px
+  );
+}
+
+.avatar3 {
+  @include mentor_ava('../../../../public/images/mentors/wadeWarren.png', 190px);
+}
+
+.container {
+  display: flex;
+}

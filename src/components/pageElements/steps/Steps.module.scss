@@ -1,0 +1,100 @@
+@import '../../../../styles/variable.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  width: 475px;
+  height: 191px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.wrapper_empty {
+  background: $dark-blue-color;
+  width: 497px;
+  height: 218px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin step_wrapper($background, $marginLeft) {
+  background: $background;
+  margin-left: $marginLeft;
+  border-radius: 30px;
+  width: 507px;
+  height: 228px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper_right {
+  @include step_wrapper(
+    linear-gradient(
+      90deg,
+      rgba(21, 191, 253, 0) 76.03%,
+      rgba(21, 191, 253, 0.7) 94.15%,
+      rgba(156, 55, 253, 0.7) 99.95%
+    ),
+    0
+  );
+}
+
+.wrapper_left {
+  @include step_wrapper(
+    linear-gradient(
+      270deg,
+      rgba(21, 191, 253, 0) 76.03%,
+      rgba(21, 191, 253, 0.7) 94.15%,
+      rgba(156, 55, 253, 0.7) 99.95%
+    ),
+    auto
+  );
+}
+
+.progress_line {
+  width: 4px;
+  height: calc(100% - 228px);
+  top: 114px;
+  background: $blue-green-gradient-color;
+  position: absolute;
+  left: calc(100% / 2);
+}
+
+.point {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $blue-color;
+  position: absolute;
+  left: calc(100% / 2 - 10px);
+}
+/*
+.arrow {
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  color: #fff;
+}
+
+.arrow::after {
+  content: ''; 
+  position: absolute;
+  left: 20px; bottom: -20px;
+  border: 20px solid transparent; 
+  border-left: 20px solid red;
+  bottom: 10px;
+}
+*/

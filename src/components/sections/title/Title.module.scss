@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: 25% 47% 12% 13%;
+  grid-template-rows: 40% 40% 10%;
+  padding-top: 10%;
+  align-items: center;
+    justify-items: stretch;
+    align-content: stretch;
+    column-gap: 1%;
+}
+
+.first_title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.first_description {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.button {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.second_title {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.second_description {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
