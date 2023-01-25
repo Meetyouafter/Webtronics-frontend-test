@@ -1,12 +1,14 @@
 .container {
   display: grid;
-  grid-template-columns: 25% 47% 12% 13%;
-  grid-template-rows: 40% 40% 10%;
+  width: 95%;
+  grid-template-columns: 26% 41% 16% 14%;
+  grid-template-rows: 35% 35% 10%;
   padding-top: 10%;
   align-items: center;
-    justify-items: stretch;
-    align-content: stretch;
-    column-gap: 1%;
+  justify-items: stretch;
+  align-content: stretch;
+  column-gap: 1%;
+  padding-bottom: 5%;
 }
 
 .first_title {
@@ -17,6 +19,9 @@
 .first_description {
   grid-column-start: 3;
   grid-column-end: 5;
+  display: flex;
+  align-items: flex-end;
+  height: 85%;
 }
 
 .button {

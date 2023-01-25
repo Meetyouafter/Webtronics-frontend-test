@@ -13,11 +13,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.padding_box {
+  padding-top: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mentor_description {
+  display: block;
+  width: 100%;
+  margin-top: 8%;
+}
+
+.avatars {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.description {
-  width: 150px;
+.mentors {
+  display: flex;
+  column-gap: 20px;
+  margin-top: -10%;
+  align-items: flex-start;
 }
 
 .avatar_wrapper {
@@ -30,7 +53,10 @@
   align-items: center;
 }
 .avatar1 {
-  @include mentor_ava('../../../../public/images/mentors/robertFox.png', 300px);
+  @include mentor_ava(
+    '../../../../public/images/mentors/wadeWarren.png',
+    190px
+  );
 }
 
 .avatar2 {
@@ -41,7 +67,7 @@
 }
 
 .avatar3 {
-  @include mentor_ava('../../../../public/images/mentors/wadeWarren.png', 190px);
+  @include mentor_ava('../../../../public/images/mentors/robertFox.png', 300px);
 }
 
 .container {

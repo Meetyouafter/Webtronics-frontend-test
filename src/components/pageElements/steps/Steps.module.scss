@@ -17,13 +17,14 @@
   height: 191px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
+  border: 1px solid blueviolet;
 }
 
 .wrapper_empty {
-  background: $dark-blue-color;
-  width: 497px;
-  height: 218px;
-  border-radius: 30px;
+  background: $background-color;
+  width: 491px;
+  height: 207px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +33,18 @@
 @mixin step_wrapper($background, $marginLeft) {
   background: $background;
   margin-left: $marginLeft;
-  border-radius: 30px;
-  width: 507px;
-  height: 228px;
+  border-radius: 16px;
+  width: 500px;
+  height: 216px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  padding-left: 47%;
+  padding-top: 16%;
+  padding-bottom: 5%;
 }
 
 .wrapper_right {
@@ -66,8 +73,8 @@
 
 .progress_line {
   width: 4px;
-  height: calc(100% - 228px);
-  top: 114px;
+  height: 68%;
+  top: 26%;
   background: $blue-green-gradient-color;
   position: absolute;
   left: calc(100% / 2);
@@ -78,23 +85,22 @@
   height: 24px;
   border-radius: 50%;
   background: $blue-color;
-  position: absolute;
-  left: calc(100% / 2 - 10px);
-}
-/*
-.arrow {
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
-  color: #fff;
 }
 
-.arrow::after {
-  content: ''; 
+.point_box_left {
   position: absolute;
-  left: 20px; bottom: -20px;
-  border: 20px solid transparent; 
-  border-left: 20px solid red;
-  bottom: 10px;
+  left: calc(100% / 2 - 55px);
+  display: flex;
+  column-gap: 5px;
 }
-*/
+
+.point_box_right {
+  position: absolute;
+  left: calc(100% / 2 - 10px);
+  display: flex;
+  column-gap: 5px;
+}
+
+.arrow {
+  width: 40px;
+}

@@ -1,7 +1,7 @@
 const mentorsData = [
   {
-    name: 'Robert Fox',
-    imageUrl: '../../../../public/images/mentors/robertFox.png',
+    name: 'Wade Warren',
+    imageUrl: '../../../../public/images/mentors/wadeWarren.png',
     description: 'Front-end engineers work closely with designers',
   },
   {
@@ -10,8 +10,8 @@ const mentorsData = [
     description: 'Front-end engineers work closely with designers',
   },
   {
-    name: 'Wade Warren',
-    imageUrl: '../../../../public/images/mentors/wadeWarren.png',
+    name: 'Robert Fox',
+    imageUrl: '../../../../public/images/mentors/robertFox.png',
     description: 'Front-end engineers work closely with designers',
   },
 ];

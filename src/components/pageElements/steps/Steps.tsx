@@ -8,16 +8,26 @@ interface StepsProps {
   description: string,
   index: number
 }
-const StepsRender: FC<StepsProps> = ({
+const Step: FC<StepsProps> = ({
   name, title, description, index,
 }) => {
   const orientation = index % 2 === 0 ? style.wrapper_right : style.wrapper_left;
+  const pointBox = index % 2 === 0 ? style.point_box_left : style.point_box_right;
+  const arrowDirection = index % 2 === 0 ? 'leftArrow' : 'rightArrow';
+  const leftArrow = index % 2 === 0
+    ? <img src={`/icons/${arrowDirection}.svg`} alt="arrow" className={style.arrow} />
+    : '';
+  const rightArrow = index % 2 !== 0
+    ? <img src={`/icons/${arrowDirection}.svg`} alt="arrow" className={style.arrow} />
+    : '';
 
   return (
-    <section className={orientation}>
-      <div className={style.point} />
-      <div className={style.arrow} />
-      <div className={style.line} />
+    <div className={orientation}>
+      <div className={pointBox}>
+        {leftArrow}
+        <div className={style.point} />
+        {rightArrow}
+      </div>
       <div className={style.wrapper_empty}>
         <div className={style.box}>
           <h4>{name}</h4>
@@ -25,12 +35,12 @@ const StepsRender: FC<StepsProps> = ({
           <p className="paragrath16px">{description}</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 const getSteps = () => stepsData.map((step, index) => (
-  <StepsRender
+  <Step
     key={step.name}
     name={step.name}
     title={step.title}
@@ -40,10 +50,11 @@ const getSteps = () => stepsData.map((step, index) => (
 ));
 
 const Steps = () => (
-  <div className={style.container}>
+  <section className={style.container}>
+    <h2 className={style.title}>Steps</h2>
     <div className={style.progress_line} />
     {getSteps()}
-  </div>
+  </section>
 );
 
 export default Steps;

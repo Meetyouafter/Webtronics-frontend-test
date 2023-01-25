@@ -35,6 +35,87 @@
 }
 
 .input {
+  width: 100%;
+  padding: 24px;
+  position: relative;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  color: #A2CBFB;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: rgba(36, 39, 66);
+}
+
+.borderWrapper {
+  position: relative;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #9C37FDB2, #15BFFDB2);
+  padding: 1px;
+}
+
+.input:active {
+  color: #fff;
+}
+
+.input:disabled {
+  color: #636363;
+}
+
+
+.input:focus {
+  color: #fff;
+  outline: none;
+}
+
+.error {
+  display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+width: 493px;
+height: 70px;
+
+background: rgba(255, 165, 165, 0.2);
+/* error */
+
+border: 1px solid #FD4646;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;  ;
+}
+
+.borderErrorWrapper {
+  background: #FD4646;
+  width: 493px;
+  height: 70px;
+  background: rgba(255, 165, 165, 0.2);
+  border: 1px solid #FD4646;
+  border-radius: 8px;
+}
+
+.borderDisabledWrapper {
+  background: #636363;
+}
+
+.errorMessage {
+  color: #FD4646;
+  margin-top: 4px;
+}
+
+.input {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;

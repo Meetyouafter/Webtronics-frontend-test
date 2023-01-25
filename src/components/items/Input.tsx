@@ -1,11 +1,36 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-interface InputProps {
-  text: string,
+interface ButtonProps {
+  placeholder?: string;
+  className?: string;
+  disabled?: boolean;
+  type: string;
+  errorMessage?: string
+  register?: any;
 }
 
-const Input: FC<InputProps> = ({ text }) => (
-  <input className="input" placeholder={text} required />
-);
+export default function Input(props: ButtonProps) {
+  return (
+    <div>
+      <div className={`"borderWrapper" ${props.disabled && 'borderDisabledWrapper'} ${!!props.errorMessage && 'borderErrorWrapper'} `}>
+        <input
+          className={`input ${props.className} clear ${
+            props.disabled ? 'disabled' : 'buttonEffects'
+          } ${!!props.errorMessage && 'error'}`}
+          placeholder={props.placeholder}
+          disabled={props.disabled}
+          {...props.register}
+        />
+      </div>
+      {!!props.errorMessage && <p className="paragrath16px errorMessage">{props.errorMessage}</p>}
+    </div>
+  );
+}
 
-export default Input;
+Input.defaultProps = {
+  placeholder: '',
+  className: '',
+  disabled: false,
+  errorMessage: '',
+  register: '',
+};

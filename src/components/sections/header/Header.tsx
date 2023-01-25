@@ -3,13 +3,13 @@ import style from './Header.module.scss';
 
 const Header = () => (
   <header className={style.container}>
-    <img src="/images/logo.png" alt="logo" />
+    <img src="/images/logo.png" alt="logo" className={style.logo} />
     <div className={style.header_items}>
-      <p className="paragrath16px">About</p>
-      <p className="paragrath16px">Programs</p>
-      <p className="paragrath16px">Steps</p>
-      <p className="paragrath16px">Questions</p>
-      <p className="paragrath16px">Get in touch</p>
+      <a href="/" className={`paragrath16px ${style.link}`}>About</a>
+      <a href="/" className={`paragrath16px ${style.link}`}>Programs</a>
+      <a href="/" className={`paragrath16px ${style.link}`}>Steps</a>
+      <a href="/" className={`paragrath16px ${style.link}`}>Questions</a>
+      <a href="/" className={`paragrath16px ${style.link}`}>Get in touch</a>
     </div>
   </header>
 );

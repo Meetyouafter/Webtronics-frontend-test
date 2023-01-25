@@ -2,8 +2,8 @@ import React from 'react';
 import style from './Gallery.module.scss';
 
 const Gallery = () => (
-  <section>
-    <h2>Gallery</h2>
+  <section className={style.primary_container}>
+    <h2 className={style.title}>Gallery</h2>
     <div className={style.container}>
       <p className={`paragrath16px ${style.first_description}`}>
         By the end of this course, you will be able to develop and publish your
@@ -16,17 +16,17 @@ const Gallery = () => (
         className="first_img"
       />
       <img
-        src="/images/gallery/developer 2.png"
+        src="/images/gallery/developer 3.png"
         alt="programmist"
         className={style.third_img}
       />
       <img
-        src="/images/gallery/developer 3.png"
+        src="/images/gallery/developer 4.png"
         alt="programmist"
         className={style.fourth_img}
       />
       <img
-        src="/images/gallery/developer 4.png"
+        src="/images/gallery/developer 2.png"
         alt="programmist"
         className={style.second_img}
       />

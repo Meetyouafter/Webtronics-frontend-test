@@ -10,4 +10,65 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
   border-radius: 20px;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 16%;
+}
+
+.borderWrapper {
+  position: relative;
+  margin: 0 11px;
+  background: linear-gradient(135deg, #9c37fdb2, #15bffdb2);
+  padding: 1px;
+  margin-bottom: 150px;
+  width: 100%;
+}
+
+.innerWrapper {
+  backdrop-filter: blur(5px);
+  background: #181c37;
+  background-position: center;
+  padding: 56px 0;
+  width: 100%;
+}
+
+.borderWrapper,
+.innerWrapper {
+  border-radius: 16px;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  width: fit-content;
+  margin: auto;
+}
+
+.flexWrapper h2 {
+  text-align: center;
+  margin: 16px;
+}
+
+.flexWrapper > p {
+  text-align: center;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.inputGroup > div {
+  margin: 8px 0;
+}
+
+.requestResult p {
+  margin: 0;
 }
