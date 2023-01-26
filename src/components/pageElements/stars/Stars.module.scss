@@ -1,56 +1,5 @@
 @import '../../../../styles/variable.scss';
 
-@mixin circle($left, $top, $zindex) {
-  position: absolute;
-  width: 356px;
-  height: 356px;
-  left: $left;
-  top: $top;
-  background: #2A3E84;
-  z-index: $zindex;
-  filter: blur(175px);
-}
-
-.circle1 {
-  @include circle(90%, 50%, 0);
-}
-
-.circle2 {
-  @include circle(10%, 120%, -1);
-}
-
-.circle3 {
-  @include circle(65%, 300%, 0);
-}
-
-.circle4 {
-  @include circle(-3%, 400%, 1);
-}
-
-.circle5 {
-  @include circle(10%, 650%, 1);
-}
-
-.circle6 {
-  @include circle(72%, 944%, 1);
-}
-
-.circle7 {
-  @include circle(0%, 1140%, -1);
-}
-
-.circle8 {
-  @include circle(73%, 1277%, -1);
-}
-
-.circle9 {
-  @include circle(-2%, 1500%, -1);
-}
-
-.circle10 {
-  @include circle(73%, 1600%, 1);
-}
-
 @mixin small_star($left, $top) {
   position: absolute;
   width: 15px;
@@ -76,19 +25,19 @@
 }
 
 .star1 {
-  @include normal_star(50%, 190%)
+  @include normal_star(50%, 165%)
 }
 
 .star2 {
-  @include normal_star(24%, 210%)
+  @include normal_star(24%, 170%)
 }
 
 .star3 {
-  @include normal_star(70%, 195%)
+  @include normal_star(70%, 175%)
 }
 
 .star4 {
-  @include big_star(90%, 195%)
+  @include big_star(90%, 175%)
 }
 
 .star5 {
@@ -96,64 +45,54 @@
 }
 
 .star6 {
-  @include small_star(67%, 350%)
+  @include small_star(67%, 300%)
 }
 
 .star7 {
-  @include small_star(75%, 385%)
+  @include small_star(75%, 330%)
 }
 
 .star8 {
-  @include big_star(88%, 415%)
+  @include big_star(88%, 360%)
 }
 
 .star9 {
-  @include normal_star(30%, 600%)
+  @include normal_star(30%, 550%)
 }
 
 .star10 {
-  @include small_star(10%, 1500%)
+  @include small_star(11%, 645%)
 }
 
 .star11 {
-  @include normal_star(90%, 1500%)
+  @include normal_star(93%, 666%)
 }
 
 .star12 {
-  @include small_star(60%, 1600%)
+  @include small_star(60%, 728%)
 }
 
 .star13 {
-  @include small_star(10%, 1800%)
+  @include small_star(87%, 785%);
+  z-index: 1;
 }
 
 .star14 {
-  @include big_star(10%, 2800%)
+  @include normal_star(13%, 1120%)
 }
 
 .star15 {
-  @include normal_star(50%, 2800%)
+  @include normal_star(95%, 1290%)
 }
 
 .star16 {
-  @include normal_star(60%, 3600%)
+  @include normal_star(75%, 1575%)
 }
 
 .star17 {
-  @include big_star(70%, 4600%)
+  @include small_star(68%, 1603%)
 }
 
 .star18 {
-  @include small_star(50%, 4800%)
+  @include small_star(22%, 1635%)
 }
-
-.star19 {
-  @include normal_star(20%, 5000%)
-}
-
-
-
-
-
-
-
